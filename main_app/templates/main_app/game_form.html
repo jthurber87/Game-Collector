@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if object %}
+<div class="container">
+  <h1>Edit <span class="teal-text">{{object.name}}</span></h1>
+  {% endif %}
+  <form class="d-flex flex-column justify-content-center jumbotron text-center" action="" method="post">
+    <h1>Add Game</h1>
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input class="flex-direction-column align-self-center" type="submit" value="Submit" class="btn">
+  </form>
+  {% endblock %}
